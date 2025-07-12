@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+*:focus-visible{
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+} 
+
 html {
   block-size: 100%;
 }
@@ -35,4 +40,236 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 133px 30px;
+  gap: 30px;
+  height: 534px;
+}
+
+
+.result__video-container {
+  margin-bottom: 16px;
+  height: 386px;
+  width: 711px;
+  position: relative;
+}
+
+.result__video {
+  height: 100%;
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  width: fit-content;
+  align-items: end;
+  gap: 39px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__fieldset-title {
+  font-family: 'Fira Sans Condensed';
+	font-size: 18px;
+	font-weight: 400;
+	color: #fff;
+  margin-bottom: 5px;
+}
+
+.search-form__checkbox-list {
+width: 212px;
+padding-bottom: 6px;
+}
+
+.search-form__label {
+  cursor: pointer;
+}
+
+
+.search-form__label:hover {
+  text-decoration: underline #fff;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink:none;
+}
+
+.search-form__label:not(:last-child) {
+  margin-right: 10px;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__textfield {
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  color: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  width: 225px;
+}     
+
+.search-form__textfield:active {
+  border: 1px solid #ffffff; 
+}
+
+.search-form__pseudo-checkbox {
+  height: 19px;
+  width: 19px;
+  display: inline-block;
+  vertical-align:sub;
+  border: #fff 1px solid;
+}
+
+.search-form__checkbox:checked +.search-form__pseudo-checkbox{
+  background-image: url(/images/Rectangle\ 26.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.button {
+  cursor: pointer;
+	border: 1px solid #fff;
+  font-family: 'Fira Sans Condensed';
+	font-size: 18px;
+	font-weight: 700;
+	color: #fff;
+	background-color: transparent;
+}
+
+.button:active {
+   background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline #fff;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink:none;
+}
+
+.search-form__submit-button {
+  padding:5px 73px;
+}
+
+.content__details {
+  width: 100%;
+  height: 534px;
+}
+
+.title {
+  font-family: 'Oswald';
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+  padding-bottom: 22px;
+  margin-top: 3px;
+}
+
+.content__accent {
+  font-family: 'Oswald';
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+  color: #545050;
+}
+
+.content__accent::after {
+  content: "-";
+  position: relative;
+  top: -9px;
+  left: 2px;
+}
+
+.content__list {
+  height: 297px;
+  overflow: auto;
+  position: relative;
+}
+
+.content__list-item:not(:last-child) {
+  padding-bottom: 30px;
+}
+
+.content__card-link {
+  text-decoration: none;
+  display: block;
+  margin: 3px;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:hover {
+  text-decoration: underline #fff;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink:none;
+}
+
+.content__video-card {
+  display: flex;
+  height: 103px;
+  width: 394px;
+}
+
+.content__video-card-description-container {
+  width: 52%;
+  height: 100%;
+}
+
+.content__video-card-title {
+  font-family: 'Oswald';
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16.2px;
+  color: #fff;
+}
+
+.content__video-card-thumbnail {
+  width: 200px;
+  height: 103px;  
+}
+
+
+.more-button {
+  position:absolute;
+  padding: 5px 144px;
+  margin: 0 0 2px 2px;
 }
