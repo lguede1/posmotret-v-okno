@@ -201,7 +201,9 @@ ol {
 
 .content__accent::after {
   content: "-";
-  vertical-align: 10px;
+  position: relative;
+  top: -9px;
+  left: 2px;
 }
 
 .content__list {
