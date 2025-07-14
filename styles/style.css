@@ -94,7 +94,7 @@ ol {
   font-size: 18px;
   font-weight: 400;
   color: #fff;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 .search-form__checkbox-list {
@@ -106,6 +106,8 @@ ol {
 
 .search-form__label {
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .search-form__label:hover,
@@ -143,10 +145,10 @@ ol {
   height: 19px;
   width: 19px;
   display: inline-block;
-  vertical-align: middle;
   border: #fff 1px solid;
   background-color: transparent;
   position: relative;
+  margin-right: 4px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
@@ -199,9 +201,7 @@ ol {
 
 .content__accent::after {
   content: "-";
-  position: relative;
-  top: -9px;
-  left: 2px;
+  vertical-align: 10px;
 }
 
 .content__list {
